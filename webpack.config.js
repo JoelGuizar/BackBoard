@@ -1,9 +1,8 @@
 const path = require('path');
 
 const config = {
-  entry: './src/app.js',
+  entry: './src/App.js',
   output: {
-    path: path.resolve(__dirname, 'build')
     filename: 'bundle.js'
   },
   module: {
@@ -13,6 +12,9 @@ const config = {
         test: /\.js$/
       }
     ]
+  },
+  devServer: {
+    port: 8888
   }
 };
 
