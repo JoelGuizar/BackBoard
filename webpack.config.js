@@ -1,7 +1,7 @@
 const path = require('path');
 
 const config = {
-  entry: './src/App.js',
+  entry: ['./src/App.js'],
   output: {
     filename: 'bundle.js'
   },
@@ -9,7 +9,8 @@ const config = {
     rules: [
       {
         use: 'babel-loader',
-        test: /\.js$/
+        test: /\.js$/,
+        exclude: /node_modules/
       }
     ]
   },
